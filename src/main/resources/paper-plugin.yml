@@ -4,3 +4,9 @@ main: me.duart.cucm.CustomUnknownCommandMessage
 api-version: '${apiVersion}'
 authors: [ ${authors} ]
 description: ${description}
+
+dependencies:
+  server:
+    PlaceholderAPI:
+      load: BEFORE
+      required: false
