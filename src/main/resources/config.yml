@@ -1,0 +1,21 @@
+# The message that will replace the "Unknown or incomplete command..." message
+# Remember this only support MiniMessage format, not legacy format
+single-message: "<gradient:#D05A5A:#CA8C4F:#D4D475:#67CF67:#6DB0DD:#8379E9:#CD76E0>Unknown Command, please use <red>/help</red> for more information."
+
+# Toggling this option will ignore the single-message and make the plugin
+# chose a random message from the list everytime it is called
+use-multiple-messages: false
+# There is no limit to the number of messages in the list, you can add or remove as much as you want
+message-list:
+  - "<gradient:#ff4d4d:#ff944d:#ffd64d>Unknown command! Try <white>/help</white> for a list of spells."
+  - "<gradient:#4df0ff:#4d94ff:#a34dff>That command doesn't exist. Use <yellow>/help</yellow> to see what does."
+  - "<gradient:#ff9966:#ff66b3:#cc99ff>Hmm, nope. Type <gold>/help</gold> for available commands."
+  - "<gradient:#43e97b:#38f9d7:#404EED>Command not found. See <green>/help</green> for guidance."
+  - "<gradient:#fa709a:#fee140>Looks like this command vanished. Try <red>/help</red>!"
+  - "<gradient:#a8edea:#fed6e3>Sorry, unknown command. Use <dark_aqua>/help</dark_aqua> for assistance."
+  - "<gradient:#ff9a9e:#fecfef:#fecfef>Nothing here. Check <light_purple>/help</light_purple> for what you can do."
+  - "<gradient:#f093fb:#f5576c>Invalid command. Cast <yellow>/help</yellow> to reveal the spell-book."
+  - "<gradient:#4facfe:#00f2fe>Command doesn't compute. Run <green>/help</green> for options."
+  - "<gradient:#43e97b:#38f9d7>Not a valid spell. Flip to <gold>/help</gold> for the grimoire."
+  - "<gradient:#ff5858:#f09819>That command is MIA. Use <red>/help</red> to call it back."
+  - "<gradient:#667eea:#764ba2>Unknown incantation. Open <light_purple>/help</light_purple> for the spell list."

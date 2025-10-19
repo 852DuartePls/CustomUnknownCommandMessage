@@ -1,0 +1,6 @@
+name: ${name}
+version: ${version}
+main: me.duart.cucm.CustomUnknownCommandMessage
+api-version: '${apiVersion}'
+authors: [ ${authors} ]
+description: ${description}
