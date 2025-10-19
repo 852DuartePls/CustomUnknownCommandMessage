@@ -1,11 +1,28 @@
-# The message that will replace the "Unknown or incomplete command..." message
-# Remember this only support MiniMessage format, not legacy format
+# --------------------------------------------------------------------------- #
+# Custom Unknown Command Message  -  configuration
+# --------------------------------------------------------------------------- #
+#  SYNTAX: MiniMessage only (https://docs.adventure.kyori.net/minimessage).
+#          Legacy color codes (&6, &l …) are **not** supported.
+#
+#  PLACEHOLDERS: PlaceholderAPI integration is automatic.
+#          Use %player_name%, %luckperms_prefix%, etc. anywhere in the text.
+#          If PAPI is not installed, the placeholders are left untouched.
+# --------------------------------------------------------------------------- #
+
+# Single static message shown to every user who types an unknown command.
 single-message: "<gradient:#D05A5A:#CA8C4F:#D4D475:#67CF67:#6DB0DD:#8379E9:#CD76E0>Unknown Command, please use <red>/help</red> for more information."
 
-# Toggling this option will ignore the single-message and make the plugin
-# chose a random message from the list everytime it is called
+# --------------------------------------------------------------------------- #
+# RANDOM-MESSAGE MODE
+# --------------------------------------------------------------------------- #
+# Enable the option below to ignore "single-message" and instead pick one line
+# from "message-list" each time the event fires (at random).
 use-multiple-messages: false
-# There is no limit to the number of messages in the list, you can add or remove as much as you want
+
+# Message pool used when random-mode is enabled.
+#  - Add or remove entries freely; order is irrelevant.
+#  - In order to parse colors, each line must be in a valid MiniMessage format.
+#  - If installed, PAPI placeholders (%) can be used in every entry.
 message-list:
   - "<gradient:#ff4d4d:#ff944d:#ffd64d>Unknown command! Try <white>/help</white> for a list of spells."
   - "<gradient:#4df0ff:#4d94ff:#a34dff>That command doesn't exist. Use <yellow>/help</yellow> to see what does."
