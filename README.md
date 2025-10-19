@@ -1,7 +1,8 @@
 # ● Custom Unknow Command Message ●
 
-A simple plugin that allows users to replace the "Unknown or incomplete command..." message with your own custom message.\
-Support from: 1.20+
+A simple plugin that allows users to replace the "Unknown or incomplete command..." message with your own custom message.  
+Supports **PlaceholderAPI** – use any placeholder (`%player_name%`, `%luckperms_prefix%`, etc.) anywhere in your messages.  
+Works on Paper 1.20+ and forks.
 
 ![img.png](img.png)
 
