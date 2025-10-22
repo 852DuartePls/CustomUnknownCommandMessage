@@ -38,15 +38,36 @@ public final class CustomUnknownCommandMessage extends JavaPlugin implements Lis
         if (cache.isEmpty()) return;
 
         int index = useList ? ThreadLocalRandom.current().nextInt(cache.size()) : 0;
-        Component chosen = cache.get(index);
+        Component chosen;
         String raw = rawCache.get(index);
 
-        if (papiPresent && event.getSender() instanceof Player player && raw.contains("%")) {
-            String parsed = me.clip.placeholderapi.PlaceholderAPI.setPlaceholders(player, raw);
-            chosen = mini.deserialize(parsed);
+        if (event.getSender() instanceof Player player) {
+            raw = applyInternalPlaceholders(player, raw);
+
+            if (papiPresent && raw.contains("%")) {
+                raw = me.clip.placeholderapi.PlaceholderAPI.setPlaceholders(player, raw);
+            }
+
+        } else {
+            raw = raw
+                    .replace("{player}", "Console")
+                    .replace("<player>", "Console")
+                    .replace("{displayname}", "Console")
+                    .replace("<displayname>", "Console");
         }
 
+        chosen = mini.deserialize(raw);
+
         event.message(chosen);
+    }
+
+    private @NotNull String applyInternalPlaceholders(@NotNull Player player, @NotNull String text) {
+        String displayName = mini.serialize(player.displayName());
+        return text
+                .replace("{player}", player.getName())
+                .replace("<player>", player.getName())
+                .replace("{displayname}", displayName)
+                .replace("<displayname>", displayName);
     }
 
     public void rebuildCache() {

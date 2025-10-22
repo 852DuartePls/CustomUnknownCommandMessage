@@ -1,7 +1,6 @@
 # ● Custom Unknow Command Message ●
 
-A simple plugin that allows users to replace the "Unknown or incomplete command..." message with your own custom message.  
-Supports **PlaceholderAPI** – use any placeholder (`%player_name%`, `%luckperms_prefix%`, etc.) anywhere in your messages.  
+A simple plugin that allows users to replace the "Unknown or incomplete command..." message with your own custom message.   
 Works on Paper 1.20+ and forks.
 
 ![img.png](img.png)
@@ -32,3 +31,15 @@ All customizable by your own taste.
 | single-message        | The message that will replace the "Unknown or incomplete command..." message                                                        | <red>Unknown Command, please use <gold>/help</gold> for more information. |
 | use-multiple-messages | Toggling this option will ignore the single-message and make the plugin chose a random message from the list everytime it is called | false                                                                     |
 | message-list          | There is no limit to the number of messages in the list, you can add or remove as much as you want                                  |                                                                           |
+
+## ● Placeholders ●
+
+There are two types of placeholders you can use in your messages:
+
+1. **Built-in placeholders** (always available, even without PlaceholderAPI):
+    - `{player}` and `<player>` → The player's name
+    - `{displayname}` and `<displayname>` → The player's display name
+
+2. **PlaceholderAPI placeholders** (optional, only if PAPI is installed):
+    - Use any PAPI tags like `%player_name%`, `%luckperms_prefix%`, etc.
+    - If not installed, these placeholders will not be parsed and will appear as plain text.

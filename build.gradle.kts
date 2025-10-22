@@ -4,7 +4,7 @@ plugins {
 }
 
 group = "me.duart"
-version = "0.2.0"
+version = "0.3.0"
 description = "Customize mojang's 'Unknown or incomplete command...' message"
 
 repositories {

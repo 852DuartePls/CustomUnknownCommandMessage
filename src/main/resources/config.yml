@@ -1,12 +1,16 @@
 # --------------------------------------------------------------------------- #
-# Custom Unknown Command Message  -  configuration
+# Custom Unknown Command Message - Configuration
 # --------------------------------------------------------------------------- #
-#  SYNTAX: MiniMessage only (https://docs.adventure.kyori.net/minimessage).
-#          Legacy color codes (&6, &l …) are **not** supported.
+#  SYNTAX: MiniMessage only (https://docs.adventure.kyori.net/minimessage)
+#          Legacy color codes (&6, &l, etc.) are **not** supported.
 #
-#  PLACEHOLDERS: PlaceholderAPI integration is automatic.
-#          Use %player_name%, %luckperms_prefix%, etc. anywhere in the text.
-#          If PAPI is not installed, the placeholders are left untouched.
+#  PLACEHOLDERS: There are two ways to use placeholders in your messages:
+#          1. Built-in placeholders: {player}, <player>, {displayname}, <displayname>
+#          2. PlaceholderAPI placeholders (https://www.spigotmc.org/resources/placeholderapi.19971/)
+#
+#          PlaceholderAPI integration is automatic.
+#          You can use placeholders like %player_name%, %luckperms_prefix%, etc.
+#          If PAPI is not installed, those placeholders will remain as-is.
 # --------------------------------------------------------------------------- #
 
 # Single static message shown to every user who types an unknown command.
